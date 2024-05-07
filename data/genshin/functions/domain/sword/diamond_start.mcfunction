@@ -15,7 +15,7 @@ function genshin:domain/sword/start
 execute unless score !swordDomain counter matches 1.. run tellraw @a[distance=..8] [{"text":"[","color":"dark_blue"},{"text":"Domains","color":"yellow"},{"text":"] ","color":"dark_blue"},{"text":"Welcome to the ","color":"white"},{"text":"Diamond Tier Sword Domain","color":"blue"},{"text":".","color":"white"}]
 
 # Spawn domain markers
-execute unless score !swordDomain counter matches 1.. in genshin:abyss run summon armor_stand -1050 125 1036 {NoGravity:1,Silent:1,Invulnerable:1,Marker:1,Invisible:1,Tags:["domainSwordDiamond","system","center","transient"]}
+execute unless score !swordDomain counter matches 1.. in genshin:abyss run summon armor_stand -1050 125 1036 {NoGravity:1,Silent:1,Invulnerable:1,Marker:1,Invisible:1,Tags:["domainSwordDiamond","domainSword","system","center","transient"]}
 
 # Begin the domain
 execute unless score !swordDomain counter matches 1.. run tag @a[distance=..12] add domainSwordDiamond

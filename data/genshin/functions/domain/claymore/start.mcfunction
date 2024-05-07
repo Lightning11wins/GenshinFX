@@ -13,7 +13,7 @@
 execute if score !claymoreDomain counter matches 1.. run tellraw @a[distance=..8] [{"text":"[","color":"dark_blue"},{"text":"Domains","color":"yellow"},{"text":"] ","color":"dark_blue"},{"text":"Sorry, the ","color":"white"},{"text":"Claymore Domain","color":"blue"},{"text":" is currently in use by ","color":"white"},{"selector":"@a[tag=domainClaymoreIron]","color":"blue"},{"selector":"@a[tag=domainClaymoreDiamond]","color":"blue"},{"selector":"@a[tag=domainClaymoreNetherite]","color":"blue"},{"text":"!","color":"white"}]
 
 # Success
-execute unless score !claymoreDomain counter matches 1.. if entity @e[tag=center,sort=arbitrary,limit=1] run scoreboard players set !claymoreDomain counter 2
+execute unless score !claymoreDomain counter matches 1.. if entity @e[tag=center,tag=domainClaymore,sort=arbitrary,limit=1] run scoreboard players set !claymoreDomain counter 2
 execute if score !claymoreDomain counter matches 2 run tellraw @a[distance=..8] [{"text":"[","color":"dark_blue"},{"text":"Domains","color":"yellow"},{"text":"] ","color":"dark_blue"},{"text":"Internal state corupted. Please contact developers to fix the ","color":"red"},{"text":"Claymore Domain","color":"blue"},{"text":"!","color":"red"}]
 
 # Confirm reward chest(s)

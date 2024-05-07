@@ -11,7 +11,7 @@
 # Fail message
 execute if score !swordDomain counter matches 1.. run tellraw @a[distance=..8] [{"text":"[","color":"dark_blue"},{"text":"Domains","color":"yellow"},{"text":"] ","color":"dark_blue"},{"text":"Sorry, the ","color":"white"},{"text":"Sword Domain","color":"blue"},{"text":" is currently in use by ","color":"white"},{"selector":"@a[tag=domainSwordIron]","color":"blue"},{"selector":"@a[tag=domainSwordDiamond]","color":"blue"},{"selector":"@a[tag=domainSwordNetherite]","color":"blue"},{"text":"!","color":"white"}]
 
-execute unless score !swordDomain counter matches 1.. if entity @e[tag=center,sort=arbitrary,limit=1] run scoreboard players set !swordDomain counter 2
+execute unless score !swordDomain counter matches 1.. if entity @e[tag=center,tag=domainSword,sort=arbitrary,limit=1] run scoreboard players set !swordDomain counter 2
 execute if score !swordDomain counter matches 2 run tellraw @a[distance=..8] [{"text":"[","color":"dark_blue"},{"text":"Domains","color":"yellow"},{"text":"] ","color":"dark_blue"},{"text":"Internal state corupted. Please contact developers to fix the ","color":"red"},{"text":"Sword Domain","color":"blue"},{"text":"!","color":"red"}]
 
 # Confirm reward chest(s)

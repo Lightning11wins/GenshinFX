@@ -16,7 +16,7 @@ function genshin:domain/claymore/start
 execute unless score !claymoreDomain counter matches 1.. run tellraw @a[distance=..8] [{"text":"[","color":"dark_blue"},{"text":"Domains","color":"yellow"},{"text":"] ","color":"dark_blue"},{"text":"Welcome to the ","color":"white"},{"text":"Diamond Tier Claymore Domain","color":"blue"},{"text":".","color":"white"}]
 
 # Spawn domain markers
-execute unless score !claymoreDomain counter matches 1.. in genshin:abyss run summon armor_stand -4050 124 1036 {NoGravity:1,Silent:1,Invulnerable:1,Marker:1,Invisible:1,Tags:["domainClaymoreDiamond","system","center","transient"]}
+execute unless score !claymoreDomain counter matches 1.. in genshin:abyss run summon armor_stand -4050 124 1036 {NoGravity:1,Silent:1,Invulnerable:1,Marker:1,Invisible:1,Tags:["domainClaymoreDiamond","domainClaymore","system","center","transient"]}
 
 # Begin the domain
 execute unless score !claymoreDomain counter matches 1.. run tag @a[distance=..12] add domainClaymoreDiamond
