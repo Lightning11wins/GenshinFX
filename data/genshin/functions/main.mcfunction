@@ -13,20 +13,10 @@
 # Sword: misode.github.io/loot-table/?share=j72r3rqa46
 
 # Handle taging
-tag AceLegacy add ace
 tag Lightning_11 add dev
 tag Eether17 add mod
-tag AceLegacy add mod
 tag HenIsHuman add mod
 tag KindofKatie_ add mod
-# tag Caylow add mod
-# tag DeoBorealis add mod
-
-# Lightning is NOT A MOD
-# tag Lightning_11 add mod
-
-# Impersonate Ace for testing
-# tag Lightning_11 add ace
 
 # Give mods blacklist exclusion
 execute as @a[tag=mod] at @s positioned ~ ~1 ~ run tag @e[distance=..1,type=item] add blacklist_exclude
@@ -72,15 +62,15 @@ execute as @a unless entity @s[scores={counter=0..}] run scoreboard players set 
 # Randomizer initiator handling with gmod.
 execute if entity @e[tag=gmod,sort=arbitrary,limit=1] run scoreboard players add @e[type=!player,limit=100,sort=random] counter 1
 
-# =============================================[ Raiden ]=============================================
+# End Crystals
+execute store result score !beamY counter run data get entity @e[tag=projection,limit=1] Pos[1] 1
+scoreboard players set !1 counter 1
+scoreboard players operation !beamY counter -= !1 counter
+execute as @e[tag=projector] store result entity @s BeamTarget.X int 1 run data get entity @e[tag=projection,limit=1] Pos[0] 1
+execute as @e[tag=projector] store result entity @s BeamTarget.Y int 1 run scoreboard players get !beamY counter
+execute as @e[tag=projector] store result entity @s BeamTarget.Z int 1 run data get entity @e[tag=projection,limit=1] Pos[2] 1
 
-# Raiden circle
-# execute as @a[tag=raiden0] run tp @e[type=armor_stand,tag=raiden0,sort=nearest,limit=1] @s
-# execute as @a[tag=raiden1] run tp @e[type=armor_stand,tag=raiden1,sort=nearest,limit=1] @s
-# execute as @a[tag=raiden2] run tp @e[type=armor_stand,tag=raiden2,sort=nearest,limit=1] @s
-# execute as @a[tag=raiden3] run tp @e[type=armor_stand,tag=raiden3,sort=nearest,limit=1] @s
-# execute as @a[tag=raiden4] run tp @e[type=armor_stand,tag=raiden4,sort=nearest,limit=1] @s
-# execute as @a[tag=raiden_red] run tp @e[type=armor_stand,tag=raiden_red,sort=nearest,limit=1] @s
+# =============================================[ Raiden ]=============================================
 
 # Raiden thunderstrike
 execute unless score !permeate counter matches 1 as @a[nbt={SelectedItem:{tag:{raiden:1}}},scores={damage=1..}] at @s run function genshin:raiden/strike
@@ -92,16 +82,6 @@ execute as @a[tag=raiden4,tag=!raiden_burst,nbt={Inventory:[{Slot:-106b,id:"with
 
 # Raiden jumpscare
 execute as @a[tag=raiden_jumpscare] unless data entity @s SelectedItem at @s run function genshin:raiden/jumpscare
-
-# Stargate
-# execute as @e[tag=stargate,type=armor_stand] at @s as @a[distance=..8,tag=ace,tag=!stargate] run function genshin:stargate
-# execute if score !stargate counter matches 20.. as @e[tag=stargate,type=armor_stand] at @s run particle portal ~ ~0.4 ~ 0.4 0.1 0.4 1 1
-# execute if score !stargate counter matches 1 as @e[tag=stargate,type=armor_stand] at @s as @a[distance=..16] run playsound entity.zombie_villager.converted player @a ~ ~ ~ 0.5 1
-# execute if score !stargate counter matches 1 as @e[tag=stargate,type=armor_stand] at @s run setblock ~ ~ ~ air
-# execute if score !stargate counter matches 1 run kill @e[tag=stargate,type=armor_stand]
-# execute if score !stargate counter matches 1 run tag @a remove stargate
-# execute if score !stargate counter matches 1.. in the_end positioned 0 0 0 run tp @a[distance=..500] 0 100 0
-# execute if score !stargate counter matches 1.. run scoreboard players remove !stargate counter 1
 
 # =============================================[ Characters ]=============================================
 
@@ -134,12 +114,6 @@ execute unless score !permeate counter matches 1 as @a[tag=furinaBurst] at @s ru
 # Focalors execution
 execute as @a[tag=focalors] at @s as @e[type=armor_stand,tag=focalors,sort=nearest,limit=1] rotated as @s run tp @s ~ ~5 ~ ~ ~
 
-# Hydro pump
-# execute if score !pump counter matches 32 run effect give @a[tag=pump] levitation 1 2 true
-# execute if score !pump counter matches 20 run effect give @a[tag=pump] levitation 2 255 true
-# execute if score !pump counter matches 1 at @a[tag=pump] positioned ~ ~1.5 ~ run function genshin:pump/activate
-# execute if score !pump counter matches 1.. run scoreboard players remove !pump counter 1
-
 # =============================================[ Companions ]=============================================
 
 # Paimon
@@ -156,11 +130,3 @@ execute unless score !permeate counter matches 1 as @a[tag=aranara] at @s run tp
 
 # Stats
 scoreboard players add !ticks stats 1
-
-# End Crystals
-execute store result score !beamY counter run data get entity @e[tag=projection,limit=1] Pos[1] 1
-scoreboard players set !1 counter 1
-scoreboard players operation !beamY counter -= !1 counter
-execute as @e[tag=projector] store result entity @s BeamTarget.X int 1 run data get entity @e[tag=projection,limit=1] Pos[0] 1
-execute as @e[tag=projector] store result entity @s BeamTarget.Y int 1 run scoreboard players get !beamY counter
-execute as @e[tag=projector] store result entity @s BeamTarget.Z int 1 run data get entity @e[tag=projection,limit=1] Pos[2] 1
