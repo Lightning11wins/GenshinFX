@@ -1,0 +1,23 @@
+{
+    "replace": false,
+	"values": [
+		"genshin:reset",
+		"afk_display:load",
+		"afk_display:second",
+        "cauldron_concrete:load",
+        "cauldron_concrete:check_for_items_in_filled_cauldrons",
+        "custom_nether_portals:load",
+        "custom_nether_portals:try_to_trigger",
+        "custom_nether_portals:enable_trigger",
+		"redstone_wrench:load",
+		"redstone_wrench:tick",
+		"terracotta_wrench:load",
+		"terracotta_wrench:tick",
+        "track_raw_stats:load",
+        "track_stats:load",
+        "track_stats:tick",
+		"wandering_trades:load",
+		"wandering_trades:math/load",
+		"wandering_trades:tick"
+	]
+}
