@@ -16,8 +16,8 @@ execute if entity @s[tag=flying] positioned ~ 0 ~ unless entity @e[type=armor_st
 kill @e[type=armor_stand,tag=wanderer]
 
 # Play state transition sound effects.
-execute if entity @s[tag=wandererGrounded,tag=wandererHover] run playsound genshin:wanderer voice @a[distance=..32] ~ ~ ~ 0.8 1 0.5
-execute if entity @s[tag=wandererGrounded,tag=wandererFly] run playsound genshin:wanderer voice @a[distance=..32] ~ ~ ~ 0.9 1 0.5
+# execute if entity @s[tag=wandererGrounded,tag=wandererHover] run playsound genshin:wanderer voice @a[distance=..32] ~ ~ ~ 0.8 1 0.5
+# execute if entity @s[tag=wandererGrounded,tag=wandererFly] run playsound genshin:wanderer voice @a[distance=..32] ~ ~ ~ 0.9 1 0.5
 execute if entity @s[tag=flying] run tag @s remove wandererGrounded
 
 # Set new state.
