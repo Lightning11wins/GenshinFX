@@ -3,13 +3,7 @@ let str = 'execute ';
 const slots = [3, 4, 5, 12, 13, 14, 21, 22, 23];
 
 // Insert recipe here:
-items.s = ['minecraft:stick', 1, 'sculkStick'];
-items.c = ['minecraft:stick', 1, 'sculkCore'];
-items.w = ['deeperdarker:warden_sword', 1];
-recipe = ['_ _ c',
-          '_ w _',
-          's _ _'];
-result = `id:"deeperdarker:warden_sword",Count:1,tag:{display:{Name:'{"text":"Guardian Sword","italic":false}',Lore:['[{"text":"❖","color":"blue","italic":false},{"text":" Advanced Crafting","color":"red"}]']},CustomModelData:101,crafter:1,sculkSword:1}`;
+// none
 
 // Render the recipe.
 let i = 0;
