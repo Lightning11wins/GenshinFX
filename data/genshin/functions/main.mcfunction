@@ -31,6 +31,9 @@ function genshin:antigrief
 # Domains
 execute unless score !permeate counter matches 1 run function genshin:domain/tick
 
+# Crafters
+execute at @a as @e[type=armor_stand,tag=crafter,distance=..16] at @s run function genshin:crafter/tick
+
 # Sculking zone
 execute unless score !permeate counter matches 1 as @e[tag=sculking_zone] at @s run function genshin:sculking_zone/tick
 execute as @e[tag=sculking_zone_marker] at @s unless entity @e[tag=sculking_zone,distance=..0.1,sort=nearest,limit=1] run function genshin:sculking_zone/dead
