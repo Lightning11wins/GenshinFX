@@ -5,3 +5,5 @@ The official data pack for the GenshinSMP server, which runs the [GenshinSMP2 mo
 This is a data pack was created for the GenshinSMP2 for [AcelegacyTTV](https://www.twitch.tv/acelegacyttv) or [https://www.youtube.com/@AcelegacyYT](https://youtube.com/@AcelegacyYT)
 
 Join our [discord](https://discord.gg/Dfg2Fsr6QW)!!!
+
+All rights reserved.
